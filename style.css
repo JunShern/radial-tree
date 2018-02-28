@@ -4,17 +4,33 @@ html, body {
 }
 
 button {
-  border: 2px solid rgb(80, 80, 80);
+  border: 1px solid rgb(200, 200, 200);
   background-color: white;
-  color: rgb(50, 50, 50);
-  padding: 8px 18px;
-  font-size: 10pt;
+  color: rgb(120, 120, 120);
+  padding: 6px 10px;
+  font-size: 8pt;
   cursor: pointer;
 }
 button:hover {
-  background: rgb(80, 80, 80);
+  background: rgb(200, 200, 200);
   color: white;
 }
 button:focus {
   outline: 0;
+}
+
+#caption_box {
+  position: absolute;
+  margin: 10px;
+  font-size: 8pt;
+  bottom: 0px;
+  right: 0px;
+}
+#caption_box {
+  position: absolute;
+  margin: 20px;
+  color: rgb(20, 20, 20);
+  font-size: 10pt;
+  bottom: 0px;
+  right: 0px;
 }
