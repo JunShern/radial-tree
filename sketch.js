@@ -17,7 +17,7 @@ function setup() {
   cnv.style('display', 'block');
   background(255);
 
-  button = createButton('Button');
+  button = createButton('Reset');
   button.position(20, 20);
   button.mousePressed(reset);
     
