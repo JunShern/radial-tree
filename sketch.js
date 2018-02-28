@@ -11,7 +11,8 @@ var iteration_count = 0;
 var node_count = 0;
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight); //createCanvas(window.innerWidth, window.innerHeight);
+  var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
   background(255);
 
   button = createButton('Reset');
@@ -21,6 +22,10 @@ function setup() {
   rootNode = new Node(null);
   rootNode.display();
   frameRate(10); // Limit framerate for cross-device consistency
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
