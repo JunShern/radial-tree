@@ -6,6 +6,8 @@ MAX_CHILDREN = 6;
 MAX_DEPTH = 2;
 BIRTH_RADIUS = Math.min(window.innerWidth, window.innerHeight) / 6;
 NOISE = BIRTH_RADIUS/4;
+// SHAKE
+SHAKE_THRESHOLD = 30;
 
 var iteration_count = 0;
 var node_count = 0;
@@ -40,6 +42,17 @@ function reset() {
   rootNode.display();
   iteration_count = 0;
   node_count = 0;
+}
+
+function checkForShake() {
+  // Calculate total change in accelerationX and accelerationY
+  accChangeX = abs(accelerationX - pAccelerationX);
+  accChangeY = abs(accelerationY - pAccelerationY);
+  accChangeT = accChangeX + accChangeY;
+  // If shake
+  if (accChangeT >= SHAKE_THRESHOLD) {
+    reset();
+  }
 }
 
 // ----------------------------------------------------------------------
