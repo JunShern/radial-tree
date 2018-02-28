@@ -7,7 +7,7 @@ MAX_DEPTH = 2;
 BIRTH_RADIUS = Math.min(window.innerWidth, window.innerHeight) / 6;
 NOISE = BIRTH_RADIUS/4;
 // SHAKE
-SHAKE_THRESHOLD = 30;
+SHAKE_THRESHOLD = 20;
 
 var iteration_count = 0;
 var node_count = 0;
@@ -17,7 +17,7 @@ function setup() {
   cnv.style('display', 'block');
   background(255);
 
-  button = createButton('Reset');
+  button = createButton('Button');
   button.position(20, 20);
   button.mousePressed(reset);
     
@@ -34,6 +34,7 @@ function draw() {
   if (node_count < MAX_NODES) {
     rootNode.maybeGrow();
   }
+  checkForShake();
 }
 
 function reset() {
