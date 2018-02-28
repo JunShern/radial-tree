@@ -13,6 +13,10 @@ var node_count = 0;
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight); //createCanvas(window.innerWidth, window.innerHeight);
   background(255);
+
+  button = createButton('Reset');
+  button.position(20, 20);
+  button.mousePressed(reset);
     
   rootNode = new Node(null);
   rootNode.display();
@@ -22,8 +26,6 @@ function setup() {
 function draw() {
   if (node_count < MAX_NODES) {
     rootNode.maybeGrow();
-  } else {
-    reset();
   }
 }
 
@@ -33,10 +35,6 @@ function reset() {
   rootNode.display();
   iteration_count = 0;
   node_count = 0;
-}
-
-function mouseClicked() { // Reset on mouse click
-  reset();
 }
 
 // ----------------------------------------------------------------------
