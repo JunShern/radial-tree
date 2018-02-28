@@ -5,6 +5,9 @@ html, body {
 
 button {
   border: 1px solid rgb(200, 200, 200);
+  position: absolute;
+  left: 1.5%;
+  top: 1.5%;
   background-color: white;
   color: rgb(120, 120, 120);
   padding: 6px 10px;
@@ -28,7 +31,8 @@ button:focus {
 }
 #caption_box {
   position: absolute;
-  margin: 20px;
+  right: 1.5%;
+  bottom: 1.5%;
   color: rgb(20, 20, 20);
   font-size: 10pt;
   bottom: 0px;
